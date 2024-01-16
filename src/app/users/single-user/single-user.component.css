@@ -1,0 +1,19 @@
+.btn {
+  margin-top: 20px;
+  color: #1f2879;
+  font-size: large;
+  font-weight: 500;
+  padding: 0;
+  margin-top: -5px;
+}
+.btn:hover {
+  color: #c35516;
+}
+mat-card{
+  text-align: left;
+}
+mat-list-item span{
+  color: grey;
+  font-weight: 500;
+  font-size: small;
+}

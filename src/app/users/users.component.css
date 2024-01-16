@@ -1,0 +1,29 @@
+h3{
+  font-weight: 500;
+}
+.btn {
+  color: #1f2879;
+  font-size: small;
+}
+.btn:hover {
+  color: #c35516;
+}
+table th,
+td {
+  width: 70dvw;
+  color: #1f2879;
+}
+.drp {
+  cursor: pointer;
+}
+mat-toolbar {
+  color: #1f2879;
+}
+.large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+

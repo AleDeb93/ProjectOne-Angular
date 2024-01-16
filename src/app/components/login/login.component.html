@@ -1,0 +1,13 @@
+<h2>Ottieni il tuo Token</h2>
+<p>Per effettuare una corretta navigazione nel portale è necessario generare un Token di accesso al sito <a
+        href="https://gorest.co.in/consumer/login" target="_blank">GoRest API</a></p>
+<p>Una volta ottenuto il tuo Token inseriscilo nel form qui sotto!</p>
+
+<div class="form">
+    <div class="mb-3">
+        <label class="form-label">Access Token</label>
+        <input type="text" class="form-control" id="accessToken" placeholder="Il tuo Token" [(ngModel)]="token" (keyup.enter)="login()">
+    </div>
+    <button type="button" class="btn" *ngIf="!logOn" (click)="login()">Accedi</button>
+    <button type="button" class="btn" *ngIf="logOn" (click)="logout()">Logout</button>
+</div>

@@ -1,0 +1,30 @@
+<h2>Creazione nuovo utente</h2>
+<p>Compila il form per aggiungere un nuovo utente oppure <span routerLink="">torna alla lista</span></p>
+<hr />
+<div class="container">
+    <form #userForm="ngForm" (ngSubmit)="submit(userForm)">
+        <div class="mb-3">
+          <label for="InputText" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="newUser.name" required>
+        </div>
+        <div class="mb-3">
+          <label for="InputEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="newUser.email" required>
+        </div>
+        <div class="mb-3">
+          <label for="gender" class="form-label">Genere</label>
+          <select id="gender" class="form-select" name="gender" [(ngModel)]="newUser.gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="status" class="form-label">Status</label>
+          <select id="status" class="form-select" name="status" [(ngModel)]="newUser.status" required>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Crea utente</button>
+      </form>
+</div>

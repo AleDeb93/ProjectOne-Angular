@@ -1,0 +1,21 @@
+<h2>Creazione nuovo post</h2>
+<p>Compila il form per aggiungere un nuovo post oppure <span routerLink="/posts">torna alla lista</span></p>
+<p>Per creare un nuovo post sarà necessario associarlo ad un utente della lista "Utenti" specificando il suo ID</p>
+<hr />
+<div class="container">
+    <form #postForm="ngForm" (ngSubmit)="submit(postForm)">
+        <div class="mb-3">
+          <label for="InputText" class="form-label">ID Utente</label>
+          <input type="text" class="form-control" id="user" name="user" [(ngModel)]="newPost.user_id" required>
+        </div>
+        <div class="mb-3">
+          <label for="InputEmail" class="form-label">Titolo</label>
+          <input type="text" class="form-control" id="title" name="title" [(ngModel)]="newPost.title" required>
+        </div>
+        <div class="mb-3">
+          <label for="InputEmail" class="form-label">Testo</label>
+          <textarea type="text" class="form-control" id="body" name="body" [(ngModel)]="newPost.body" required></textarea>
+        </div>
+        <button type="submit" class="btn">Crea post</button>
+      </form>
+</div>

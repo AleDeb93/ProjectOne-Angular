@@ -1,0 +1,14 @@
+span {
+  font-weight: 500;
+}
+span:hover {
+  cursor: pointer;
+  color: #c35516;
+}
+.btn {
+  background-color: #c35516;
+  color: #fff;
+}
+.btn:hover {
+  background-color: #1f2879;
+}

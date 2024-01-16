@@ -1,0 +1,82 @@
+<h2>Pagina Post</h2>
+<p>
+  In questa pagina è possibile visualizzare l'eleco dei post pubblicati dagli
+  utenti
+</p>
+<p>
+  &Egrave; inoltre possibile effettuare ricerche per titolo ed aggiungere nuovi
+  post!
+</p>
+<hr />
+
+<!-- Sezione ricerca post per titolo -->
+<mat-toolbar>
+  <span>Ricerca post&nbsp;</span>
+  <input
+    type="text"
+    class="form-control"
+    id="post"
+    placeholder="Titolo del post"
+    [(ngModel)]="title"
+    (keyup.enter)="getPost()"
+  />
+  <button class="btn" (click)="getPost()">
+    <mat-icon>search</mat-icon>
+  </button>
+  <button class="btn" (click)="clear()">
+    <mat-icon>clear</mat-icon>
+  </button>
+</mat-toolbar>
+<hr />
+
+<!-- Sezione lista post e results -->
+<app-loading *ngIf="loading"></app-loading>
+<div *ngIf="!loading" class="container text-center">
+  <div *ngIf="!noResults" class="container text-center">
+    <div class="row">
+      <h3 class="col">Lista post:</h3>
+      <h3 class="col btn large" routerLink="add-post">
+        Aggiungi nuovo<mat-icon>add</mat-icon>
+      </h3>
+    </div>
+  </div>
+  <div class="posts" *ngFor="let post of posts">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-subtitle>{{ post.title }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ post.body }}</p>
+        <mat-card-subtitle>Commenti:</mat-card-subtitle>
+        <br />
+        <p *ngIf="getPostComments(post.id).length === 0">
+          Non ci sono commenti da mostrare
+        </p>
+        <p *ngFor="let comment of getPostComments(post.id)">
+          <span>{{ comment.body }}</span>
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <br />
+    <h3 *ngIf="noResults">La ricerca non ha prodotto risultati!</h3>
+  </div>
+
+  <!-- Bottoni paginator -->
+  <button type="button" class="btn" (click)="navigation(2)">
+    <mat-icon>settings_backup_restore</mat-icon>
+  </button>
+  <button type="button" class="btn" (click)="navigation(0)">
+    <mat-icon>skip_previous</mat-icon>
+  </button>
+  <span>Pagina: {{ paginator.postsPage }}&emsp;</span>
+  <span class="drp" [matMenuTriggerFor]="menu">Risultati per pagina</span>
+  <mat-menu #menu="matMenu">
+    <button class="btn" mat-menu-item (click)="results(10)">10</button>
+    <button class="btn" mat-menu-item (click)="results(25)">25</button>
+    <button class="btn" mat-menu-item (click)="results(50)">50</button>
+    <button class="btn" mat-menu-item (click)="results(100)">100</button>
+  </mat-menu>
+  <button type="button" class="btn" (click)="navigation(1)">
+    <mat-icon>skip_next</mat-icon>
+  </button>
+</div>

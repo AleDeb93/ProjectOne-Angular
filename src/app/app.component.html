@@ -1,0 +1,16 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <img src="../assets/img/logobianco.svg" alt="logo" />
+    <div class="menu">
+      <button type="button" class="btn" routerLink="login">Login</button>
+      <button type="button" class="btn" routerLink="">Utenti</button>
+      <button type="button" class="btn" routerLink="posts">Post</button>
+    </div>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
