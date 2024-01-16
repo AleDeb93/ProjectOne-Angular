@@ -7,7 +7,7 @@ describe('UsersApiService', () => {
   let httpMock: HttpTestingController;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
+    TestBed.configureTestingModule({ 
       imports: [HttpClientTestingModule],
       providers: [UsersApiService]
     });
