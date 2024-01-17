@@ -6,7 +6,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-add-post',
   templateUrl: './add-post.component.html',
-  styleUrl: './add-post.component.css'
+  styleUrls: ['./add-post.component.css']
 })
 export class AddPostComponent {
   newPost: any = {
