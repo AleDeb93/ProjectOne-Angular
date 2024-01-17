@@ -7,6 +7,13 @@ Il progetto è stato svolto con [Angular CLI](https://github.com/angular/angular
 Per far funzionar in locale l'app sarà necessario scaricare il file .zip o clonare la repo da VS Code poi entrando nella console (Ctrl+Shift+ò) scrivere il comando `npm i` ed al termine dell'installazione `ng serve`. 
 Navigare dunque al `http://localhost:4200/`. 
 
+## Navigazione nel sito
+
+La prima pagina sarà quella di Login, al quale si viene re-indirizzati automaticamente attraverso l'Auth Guard
+![LOGIN](https://github.com/AleDeb93/ProjectOne-Angular/assets/121309726/a3893af4-7d79-45eb-8315-0ae5a39b5c8b)
+
+Una volta inserito il token l'applicazione effettuerà una chiamata di test alle API per verificare la validità dello stesso e da quel momento sarà possibile navigare sul portale
+
 ## Testing
 
 Come richiesto dalle specifiche i test coprono almeno il 60% di quanto prodotto.
