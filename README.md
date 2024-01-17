@@ -12,17 +12,8 @@ Navigare dunque al `http://localhost:4200/`.
 Come richiesto dalle specifiche i test coprono almeno il 60% di quanto prodotto.
 Per effettuare test o controllare il Coverage Summary in console inserire il comando `ng test  --code-coverage` tests via [Karma](https://karma-runner.github.io).
 
---- Coverage Summary ---
+![code-coverage](https://github.com/AleDeb93/ProjectOne-Angular/assets/121309726/1e330040-13d1-4758-a4c0-f499c3f3f8a5)
 
-Statements:  71.94%
-
-Branches:    61.53%
-
-Functions:   61.29%
-
-Lines:       70.50%
-
-------------------------
 
 ## Further help
 
