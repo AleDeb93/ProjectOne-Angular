@@ -4,7 +4,7 @@ Il progetto è stato svolto con [Angular CLI](https://github.com/angular/angular
 
 ## Server di sviluppo
 
-Per far funzionar in locale l'app sarà necessario scaricare il file .zip o clonare la repo da VS Code poi entrando nella console (Ctrl+Shift+ò) scrivere il comando `npm i` ed al termine dell'installazione `ng serve`. 
+Per far funzionar in locale l'app sarà necessario scaricare il file .zip o clonare la repo da VS Code poi entrando nella console (Ctrl+Shift+ò) scrivere il comando `npm i` ed al termine dell'installazione `ng s`. 
 Navigare dunque al `http://localhost:4200/`. 
 
 ## Navigazione nel sito
